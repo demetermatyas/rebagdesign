@@ -1,0 +1,1 @@
+<h1>Nincs jogosultság!</h1>
