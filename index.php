@@ -1,8 +1,8 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
+  <?php
+session_start();
+?>
 <head>
   <title>Rebag Design</title>
   <meta charset="utf-8">
