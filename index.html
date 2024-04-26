@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <?php
-session_start();
-?>
 <head>
   <title>Rebag Design</title>
   <meta charset="utf-8">
@@ -87,19 +84,7 @@ session_start();
         </div>
 
         <div class="collapse navbar-collapse" style="margin-right: 50px;" id="myNavbar" >
-          <?php
-            if(isset($_SESSION['id'])){
-              if($_SESSION['rank'] == 0){
-                include 'navs/user0_nav.php';
-              }
-              if($_SESSION['rank'] == 9){
-                include 'navs/admin_nav.php';
-              }
-              if($_SESSION['rank'] > 0 && $_SESSION['rank'] < 9){
-                include 'navs/user1_nav.php';
-              } 
-            }
-          ?>
+          <!-- A PHP kódot ki kell kommentálni vagy törölni -->
         </div>
       </div>
     </nav>
@@ -108,104 +93,18 @@ session_start();
   <div class="container-fluid">    
     <div class="row content">
       <div class="col-sm-2 sidenav"> <!-- ball széle, oldalon belüli aloldalak -->
-        <?php 
-        if(isset($_SESSION['id']) && isset($_GET['link'])) { 
-          if($_SESSION['rank'] == 9 && $_GET['link'] == 'admin_link'){
-            include 'links/admin_link.php';
-          }
-          if($_SESSION['rank'] == 0 && $_GET['link'] == 'user_link'){
-            include 'links/user_link.php';
-          }
-          if($_SESSION['rank'] == 0 && $_GET['link'] == 'filter_link'){
-            include 'links/filter_link.php';
-          }
-        }
-        ?>
+        <!-- A PHP kódot ki kell kommentálni vagy törölni -->
     </div>
 
       <div class="col-sm-8 main"> <!-- Közéspső fő rész -->
-        <?php
-        if(isset($_SESSION['id']) && isset($_GET['page']))
-        {
-          if($_GET['page'] == 'start_page')
-          {
-            include 'pages/start_page.php';
-          }
-          if($_GET['page'] == 'profil_page')
-          {
-            include 'pages/profil_page.php';
-          }
-          if($_GET['page'] == 'list_user')
-          {
-            include 'pages/list_user.php';
-          }
-          if($_GET['page'] == 'list_product')
-          {
-            include 'pages/list_product.php';
-          }
-          if($_GET['page'] == 'buy_product')
-          {
-            include 'pages/buy_product.php';
-          }
-          if($_GET['page'] == 'shopping_page')
-          {
-            include 'pages/shopping_page.php';
-          }
-          if($_GET['page'] == 'upload_products')
-          {
-            include 'pages/upload_products.php';
-          }
-          if($_GET['page'] == 'admin_page')
-          {
-            include 'pages/admin_page.php';
-          }
-          if($_GET['page'] == 'order_page')
-          {
-            include 'pages/order_page.php';
-          }
-        }
-        else
-        {
-          include 'pages/start_page.php';
-        }
-        ?>
+        <!-- A PHP kódot ki kell kommentálni vagy törölni -->
       </div>
 
       <br>
 
       <div class="col-sm-2 formnav"> <!-- Jobb széle, belépés+regisztálás, főleg adat felvitel, esetleg hirdetmények -->
       <div class="jobb" style="position: fixed">
-          <?php
-            if(isset($_SESSION['id']))
-            {
-              if($_GET['form']=='update')
-              {
-                include 'forms/update_form.php';
-              }
-              if($_GET['form']=='update_product')
-              {
-                include 'forms/update_form_product.php';
-              }
-              if($_GET['form']=='register')
-              {
-                include 'forms/register_form.php';
-              }
-              if($_GET['form']=='create_form_product')
-              {
-                include 'forms/create_form_product.php';
-              }
-            }
-            else
-            {
-              if(isset($_GET['form']) && $_GET['form']=='register')
-              {
-                include 'forms/register_form.php';
-              }
-              else{
-                include 'forms/login_form.php';
-              }
-            }
-          ?>
+          <!-- A PHP kódot ki kell kommentálni vagy törölni -->
           </div>
       </div>
     </div>
@@ -220,5 +119,3 @@ session_start();
 </body>
 
 </html>
-
-
